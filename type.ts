@@ -1,11 +1,23 @@
 // ********************* Type peut etre défini et combine differents type + interesection et union
 
 // Les types de base incluent number, string, boolean, null, undefined, symbol, et bigint
+
 let nom: string = 'Alice';
 let age: number = 30;
 let symbol: symbol;
 let bigint: bigint;
 let isActive: boolean = true;
+
+
+/*
+any : Accepte n'importe quel type sans vérification, mais avec un risque accru d'erreurs.
+unknown : Accepte n'importe quel type, mais nécessite des vérifications de type avant utilisation, ce qui le rend plus sûr.
+null : Représente l'absence délibérée d'une valeur.
+undefined : Indique qu'une variable n'a pas été initialisée.
+*/
+
+console.log(typeof null); // "object":  une absence délibérée de valeur
+console.log(typeof undefined); // "undefined": indique que quelque chose n'a pas encore été défini.
 
 // union
 type Status = "success" | "error" | "loading";
