@@ -8,14 +8,30 @@ le type des variables est vérifié au moment de la compilation. Cela permet de 
 */
 import { User } from './module';
 
+/*
 
+Différence entre any, unknown, never et void ?
+Réponse :
+any : N'importe quel type, désactive le typage.
+unknown : Type inconnu, nécessite une vérification avant usage.
+never : Type pour les valeurs qui n’existent jamais (ex : une fonction qui lance une erreur).
+void : Type pour les fonctions qui ne retournent rien.
 
+*/
 
 // définir un tableau avec un nombre fixe d’éléments de types spécifiques.
 let tuple: [string, number] = ["Alice", 25];
 
 // function
 function add(a: number, b: number = 0): number {
+  return a + b;
+}
+
+
+// surcharge
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any): any {
   return a + b;
 }
 
