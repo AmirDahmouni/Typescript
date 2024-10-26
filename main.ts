@@ -2,11 +2,17 @@
 TypeScript est un language de prog typé de JavaScript qui compile en JavaScript pur.
 Il ajoute des fonctionnalités comme les types statiques, les interfaces, les classes, et les énumérations,
 ce qui permet de détecter des erreurs plus tôt et de rendre le code plus robuste et facile à maintenir.
+
+typescript n'est pa sun language dynamique
+
 En activant strict mode dans tsconfig.json, TypeScript applique un typage plus strict et prévient davantage d’erreurs
+providing the --strictNullChecks flag to the TypeScript (tsc) compiler
 
 le type des variables est vérifié au moment de la compilation. Cela permet de détecter les erreurs plus tôt dans le développement.
 
-typage statiques
+TypeScript doesn't support static classes
+
+typage statiques ( primitive types: string, boolean, number, bigint, void, any)
 typage générique
 */
 import { User } from './module';
