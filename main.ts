@@ -5,6 +5,9 @@ ce qui permet de détecter des erreurs plus tôt et de rendre le code plus robus
 En activant strict mode dans tsconfig.json, TypeScript applique un typage plus strict et prévient davantage d’erreurs
 
 le type des variables est vérifié au moment de la compilation. Cela permet de détecter les erreurs plus tôt dans le développement.
+
+typage statiques
+typage générique
 */
 import { User } from './module';
 
