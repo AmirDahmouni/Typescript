@@ -100,5 +100,18 @@ interface User {
 const user: User = { name: "Alice", age: 25 }; // User contient les propriétés `name` et `age`
 
 
+// type indexé
+interface Person {
+  name: string;
+  age: number;
+}
+type PersonKeys = keyof Person; // "name" | "age"
+
+
+// fonction de haut niveau
+function wrapInArray<T>(value: T): T[] {
+  return [value];
+}
+
 
 

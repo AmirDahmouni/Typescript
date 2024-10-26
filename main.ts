@@ -19,6 +19,8 @@ void : Type pour les fonctions qui ne retournent rien.
 
 */
 
+const obj = { name: "Alice", age: 25 } as const;
+
 // définir un tableau avec un nombre fixe d’éléments de types spécifiques.
 let tuple: [string, number] = ["Alice", 25];
 
@@ -59,3 +61,26 @@ async function fetchData(): Promise<string> {
 interface Pet { name: string; }
 class Dog { name: string; }
 let pet: Pet = new Dog(); // Compatible car même structure
+
+
+// Type Guards
+function isString(value: any): value is string {
+  return typeof value === 'string';
+}
+
+
+//decorators
+function Log(target: any, propertyName: string) {
+  console.log(`Property: ${propertyName}`);
+}
+class Person {
+  @Log
+  name: string;
+}
+
+// namespace
+namespace Geometry {
+  export interface Shape {
+    area(): number;
+  }
+}

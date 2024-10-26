@@ -74,6 +74,14 @@ type ReadonlyUserC = { [K in keyof UserC]: UserC[K] }; // { name: string; age: n
 type Name = "Alice" | "Bob";
 type Greeting = `Hello, ${Name}`; // "Hello, Alice" | "Hello, Bob"
 
+// type de fonction
+type MyFunction = (arg1: number, arg2: string) => boolean;
+
+//type mappé
+type Readonly<T> = {
+  readonly [K in keyof T]: T[K];
+};
+
 
 
 
