@@ -1,4 +1,12 @@
 // ********************* Type peut etre défini et combine differents type + interesection et union
+
+// Les types de base incluent number, string, boolean, null, undefined, symbol, et bigint
+let nom: string = 'Alice';
+let age: number = 30;
+let symbol: symbol;
+let bigint: bigint;
+let isActive: boolean = true;
+
 // union
 type Status = "success" | "error" | "loading";
 let currentStatus: Status = "success";
